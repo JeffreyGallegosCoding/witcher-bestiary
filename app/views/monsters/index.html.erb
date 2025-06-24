@@ -1,0 +1,24 @@
+<body class="bg-black">
+<div class="container justify-content-center">
+  <div class="row text-center" id="book-home">
+    <div id='book-title'>
+      <h1 id="book-title-text">Witcher Bestiary</h1>
+    </div>
+    <%= image_tag("index/witcher-logo-index.jpg", alt: "witcher-logo") %>
+  </div>
+</div>
+</body>
+
+<% @monsters.each do |monster| %>
+  <div class="text-white" id="monster-list">
+    <h2><%= monster.name %></h2>
+    <p><%= monster.description %></p>
+    <p><%= monster.weaknesses %></p>
+    <p><%= monster.habitat %></p>
+    <p><%= monster.monster_type %></p>
+    <p><%= monster.threat_level %></p>
+    <p><%= monster.intelligence %></p>
+    <p><%= monster.abilities %></p>
+    <p><%= monster.weapons %></p>
+  </div>
+<% end %>

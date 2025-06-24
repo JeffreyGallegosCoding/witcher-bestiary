@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "monsters/index"
   get "pages/home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -15,6 +16,8 @@ Rails.application.routes.draw do
 
   # Homepage controller
   Rails.application.routes.draw do
-    root 'pages#home'
+  get "monsters/index"
+    root 'monsters#index'
+    resources :monsters, only: [:index]
   end
 end
